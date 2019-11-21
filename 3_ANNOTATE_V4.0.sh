@@ -32,8 +32,7 @@ echo "number of samples in vcf: $sample_no"
 #  ANNOVAR ANNOTATION; have removed in house databases #
 #######################
 
-table_annovar.pl "$sampleID"_annovar.input /scratch/GENE_DATABASES/humandb/HG38/ -buildver hg38 -out "$sampleID" -remove -protocol refGene,knownGene,avsnp144,1000g2015aug_all,1000g2015aug_afr,1000g2015aug_amr,1000g2015aug_sas,1000g2015aug_eur,1000g2015aug_eas,esp6500siv2_all,esp6500siv2_ea,esp6500siv2_aa,exac03,cosmic70,dbnsfp30a,dbnsfp31a_interpro,dbscsnv11,clinvar_20190305,hrcr1,kaviar_20150923,nci60 -operation g,g,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f -arg '-splicing_threshold 20','-splicing_threshold 20',,,,,,,,,,,,,,,,,,, 2>>annovar.log
-
+table_annovar.pl "$sampleID"_annovar.input /scratch/GENE_DATABASES/humandb/HG38/ -buildver hg38 -out combined_CENTcases -remove -protocol refGene,knownGe,gme,avsnp147,1000g2015aug_all,1000g2015aug_afr,1000g2015aug_amr,1000g2015aug_sas,1000g2015aug_eur,1000g2015aug_eas,esp6500siv2_all,esp6500siv2_ea,esp6500siv2_aa,exac03,cosmic70,dbnsfp30a,dbnsfp31a_interpro,dbscsnv11,clinvar_20190305,hrcr1,kaviar_20150923,nci60 -operation g,g,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f -arg '-splicing_threshold 20','-splicing_threshold 20',,,,,,,,,,,,,,,,,,,, 2>>annovar.log
 
 ##################
 # ADD Extra info #
